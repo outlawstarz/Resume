@@ -1,1 +1,1 @@
-# Online-Resume-Capstone
+#Resume website created using VSC and HTML

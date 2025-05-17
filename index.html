@@ -2,66 +2,199 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Resume</title>
-    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darrell Chism - Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font to the body */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        /* Custom styling for print - hides header/footer, adjusts margins */
+        @media print {
+            body {
+                margin: 0;
+                background-color: #fff; /* White background for print */
+                font-size: 10pt; /* Adjust font size for print */
+            }
+            .no-print {
+                display: none; /* Hide elements marked with no-print class */
+            }
+            .print-show {
+                display: block !important; /* Ensure elements marked with print-show are visible */
+            }
+            .container {
+                box-shadow: none; /* Remove shadow for print */
+                border: none; /* Remove border for print */
+                margin: 0;
+                padding: 0;
+            }
+            /* Ensure links are visible when printed */
+            a {
+                color: #000 !important;
+                text-decoration: underline !important;
+            }
+            /* Remove page breaks inside sections */
+            section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
 </head>
-<body>
-<h1>Darrell Chism</h1>
-<img src="./assets/images/me.jpg" height="200" alt="picture of me"/>
+<body class="antialiased text-gray-800">
 
+    <div class="container mx-auto max-w-4xl p-4 sm:p-6 lg:p-8 bg-white shadow-xl rounded-lg my-8">
 
-<h2>Summary</h2>
-<p>After I graduated college, I decided that I wanted to start working on video games. I've been playing them my entire life </br>
-    and finally had a basic understanding of how programming worked. I decided to dive head first into Unreal Engine and </br>
-    Godot. While I have yet to complete and publish a full title, I have several small projects/ideas that I've created.
-</p>
-<hr />
+        <header class="text-center mb-10 border-b pb-6 border-gray-200">
+            <h1 class="text-4xl sm:text-5xl font-bold text-gray-900">Darrell Chism</h1>
+            <p class="text-lg sm:text-xl text-blue-600 mt-2">Software Engineer | Game Developer</p>
+            <div class="mt-4 flex flex-col sm:flex-row justify-center items-center sm:space-x-4 text-gray-600">
+                <a href="mailto:dcchism@proton.me" class="hover:text-blue-600 transition-colors duration-300 mb-2 sm:mb-0">
+                    <i class="fas fa-envelope mr-1"></i> dcchism@proton.me
+                </a>
+                <span class="hidden sm:inline">|</span>
+                <a href="tel:9043039561" class="hover:text-blue-600 transition-colors duration-300 mb-2 sm:mb-0">
+                    <i class="fas fa-phone mr-1"></i> (904) 303-9561
+                </a>
+                <span class="hidden sm:inline">|</span>
+                <a href="https://github.com/phantomcodingllc" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300 mb-2 sm:mb-0">
+                    <i class="fab fa-github mr-1"></i> GitHub (phantomcodingllc)
+                </a>
+                <span class="hidden sm:inline">|</span>
+                <a href="https://outlawstarz.itch.io/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">
+                    <i class="fas fa-gamepad mr-1"></i> Itch.io Profile
+                </a>
+            </div>
+            <p class="text-sm text-gray-500 mt-3">Bradenton, FL 34209</p> </header>
 
+        <main>
 
-<h2> Education</h2>
-<ul>
-    <li>Bachelor of Computer Science, Software Engineering - Southern New Hampshire University (2018-2023)</li>
-</ul>
-<hr />
+            <section id="summary" class="mb-8">
+                <h2 class="text-2xl font-semibold text-blue-700 border-b-2 border-blue-200 pb-2 mb-4">
+                    <i class="fas fa-user-alt mr-2"></i>Professional Summary
+                </h2>
+                <p class="text-gray-700 leading-relaxed">
+                    A results-driven Software Engineer and Game Developer with hands-on experience in emerging technologies and a fervent commitment to continuous improvement. Proven ability in identifying opportunities for technological enhancements and implementing robust solutions. Adept at leveraging innovative tools and methodologies to resolve complex problems and boost productivity. Thrives in dynamic, fast-paced environments, consistently driving technological advancements.
+                </p>
+            </section>
 
-<h2> Work Experience</h2>
-<ul>
-    <li>IT Specialist - Self Employed </li>
-    <p><h4>September 2021 - Present</p></h4>
-        <ul>
-            <li><h3>Provided technical support across various devices</li></h3>
-            <li><h3>Managed data across physical and cloud-based devices</li></h3>
-            <li><h3>Oversaw website creation and functionality</li></h3>
-        </ul>
-</ul>
-<hr />
+            <section id="experience" class="mb-8">
+                <h2 class="text-2xl font-semibold text-blue-700 border-b-2 border-blue-200 pb-2 mb-6">
+                    <i class="fas fa-briefcase mr-2"></i>Professional Experience
+                </h2>
+                <div class="mb-6 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">IT Specialist</h3>
+                    <p class="text-md text-blue-600">Self-Employed | Bradenton, FL</p>
+                    <p class="text-sm text-gray-500 italic">September 2021 - Present</p> <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1 leading-relaxed">
+                        <li>Delivered comprehensive technical support for diverse hardware and software, expertly managing data migration and synchronization across physical and cloud-based storage solutions.</li>
+                        <li>Engineered and maintained website functionality, incorporating robust security measures to ensure account and website integrity.</li>
+                    </ul>
+                </div>
+            </section>
 
-<h2> Skills</h2>
-<ul>
-    <li>Basic Game Design</li>
-    <li>UI Design</li>
-    <li>Level Design</li>
-    <li>Technology Integration</li>
-    <li>User Interface Design</li>
-    <li>Data Integration</li>
-    <li>C++</li>
-</ul>
-<hr />
+            <section id="education" class="mb-8">
+                <h2 class="text-2xl font-semibold text-blue-700 border-b-2 border-blue-200 pb-2 mb-6">
+                    <i class="fas fa-graduation-cap mr-2"></i>Education
+                </h2>
+                <div class="mb-6 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Bachelor of Science in Software Engineering</h3>
+                    <p class="text-md text-blue-600">Southern New Hampshire University | Manchester, NH</p>
+                    <p class="text-sm text-gray-500 italic">Graduated: October 2023 (cum laude)</p> <p class="mt-1 text-gray-700">GPA: 3.55</p>
+                    <div class="mt-3">
+                        <h4 class="text-lg font-medium text-gray-800 mb-1">Key Capstone Project:</h4>
+                        <p class="text-gray-700 leading-relaxed">
+                            <strong>"Your Weight Loss Journey" (Lead Designer & Developer):</strong> Spearheaded the design and development of an Android application enabling users to meticulously track daily weight entries and visualize fluctuations through dynamic graphs and scales. This initiative translated a personal health and wellness journey into a practical software solution.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-<h2> Awards & Accomplishments</h2>
-<ul>
-    <li>Graduated Cum Laude</li>
-</ul>
-<hr />
+            <section id="skills" class="mb-8">
+                <h2 class="text-2xl font-semibold text-blue-700 border-b-2 border-blue-200 pb-2 mb-6">
+                    <i class="fas fa-cogs mr-2"></i>Technical Proficiencies
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"> <div>
+                        <h4 class="text-lg font-medium text-gray-800 mb-2">Core Competencies:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Game Development & Design</li>
+                            <li>Full-Stack Software Development</li>
+                            <li>Software Implementation & Integration</li>
+                            <li>Advanced IT Diagnostics</li>
+                            <li>Systematic Troubleshooting</li>
+                            <li>System Architecture & Upgrades</li>
+                            <li>Application Lifecycle Support</li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h4 class="text-lg font-medium text-gray-800 mb-2">Methodologies & Attributes:</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                             <li>Emerging Technology Adoption</li>
+                             <li>Continuous Process Improvement</li>
+                             <li>Strategic Technological Enhancement</li>
+                             <li>Complex Problem-Solving</li>
+                             <li>High Adaptability & Resilience</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-<h2> Other</h2>
-<ul>
-    <li><h4><a href="./contact.html">Contact Me</a></h4></li>
-    <li><h4><a href="./portfolio.html">Portfolio</a></h4></li>
-</ul>
+            <section id="projects" class="mb-8">
+                <h2 class="text-2xl font-semibold text-blue-700 border-b-2 border-blue-200 pb-2 mb-6">
+                    <i class="fas fa-project-diagram mr-2"></i>Key Projects
+                </h2>
+                <div class="mb-6 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Clone Survivor (Ongoing Development)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-2">
+                        Developing an engaging game inspired by "Vampire Survivors," focusing on creating a unique and compelling player experience. This personal project showcases passion for game mechanics and iterative design.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://outlawstarz.itch.io/clone-survivor" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-300">
+                            <i class="fas fa-external-link-alt mr-1"></i> View on Itch.io
+                        </a>
+                    </div>
+                </div>
+                <div class="mb-6 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Aura (Multiplayer MMO)</h3>
+                    <p class="text-gray-700 leading-relaxed mb-2">
+                        Contributed to the development of a multiplayer MMO, following an extensive tutorial framework. This project (currently 60% complete) provided significant experience in large-scale game architecture and networking concepts.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://outlawstarz.itch.io/aura" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-300">
+                             <i class="fas fa-external-link-alt mr-1"></i> View on Itch.io
+                        </a>
+                    </div>
+                </div>
+                <div class="mb-6 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <h3 class="text-xl font-semibold text-gray-800">Comprehensive Developer Portfolio</h3>
+                    <p class="text-gray-700 leading-relaxed mb-2">
+                        A curated collection of web-based projects, applications, and profiles hosted on GitHub, demonstrating a breadth of software development capabilities and technical skills.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://github.com/phantomcodingllc" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-300">
+                            <i class="fab fa-github mr-1"></i> Explore on GitHub (phantomcodingllc)
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 pt-6 border-t border-gray-200 no-print">
+            <p class="text-gray-600 text-sm">&copy; <span id="currentYear"></span> Darrell Chism. All rights reserved.</p>
+            <p class="text-gray-500 text-xs mt-1">
+                Professionally crafted with HTML & <a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">Tailwind CSS</a>.
+                Hosted via <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600">GitHub Pages</a>.
+            </p>
+        </footer>
+
+    </div>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
 </body>
-<hr />
-<footer>
-    <p>© Darrell Chism 2025</p>
-</footer>
 </html>

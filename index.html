@@ -11,7 +11,7 @@
         /* Apply Inter font to the body */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8f9fa; /* Lighter gray background */
+            background-color: #f0f2f5; /* Softer background color */
         }
         /* Custom styling for print - hides header/footer, adjusts margins */
         @media print {
@@ -40,6 +40,26 @@
                 page-break-inside: avoid;
             }
         }
+        /* Custom section styling */
+        .section-card {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .section-card:hover {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .section-header {
+            color: #4f46e5; /* Indigo-600 */
+            border-bottom: 2px solid #e0e7ff; /* Indigo-100 */
+        }
+        .accent-text {
+            color: #4f46e5; /* Indigo-600 */
+        }
+        .hover-accent:hover {
+            color: #4338ca; /* Indigo-700 */
+        }
     </style>
 </head>
 <body class="antialiased text-gray-800">
@@ -48,21 +68,21 @@
 
         <header class="text-center mb-10 border-b pb-6 border-gray-200">
             <h1 class="text-4xl sm:text-5xl font-bold text-gray-900">Darrell Chism</h1>
-            <p class="text-lg sm:text-xl text-indigo-600 mt-2">Software Engineer | Game Developer</p>
+            <p class="text-lg sm:text-xl accent-text mt-2">Software Engineer | Game Developer</p>
             <div class="mt-4 flex flex-col sm:flex-row justify-center items-center sm:space-x-4 text-gray-600">
-                <a href="mailto:dcchism@proton.me" class="hover:text-blue-600 transition-colors duration-300 mb-2 sm:mb-0">
+                <a href="mailto:dcchism@proton.me" class="hover-accent transition-colors duration-300 mb-2 sm:mb-0">
                     <i class="fas fa-envelope mr-1"></i> dcchism@proton.me
                 </a>
                 <span class="hidden sm:inline">|</span>
-                <a href="tel:9043039561" class="hover:text-blue-600 transition-colors duration-300 mb-2 sm:mb-0">
+                <a href="tel:9043039561" class="hover-accent transition-colors duration-300 mb-2 sm:mb-0">
                     <i class="fas fa-phone mr-1"></i> (904) 303-9561
                 </a>
                 <span class="hidden sm:inline">|</span>
-                <a href="https://github.com/outlawstarz" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300 mb-2 sm:mb-0">
+                <a href="https://github.com/outlawstarz" target="_blank" rel="noopener noreferrer" class="hover-accent transition-colors duration-300 mb-2 sm:mb-0">
                     <i class="fab fa-github mr-1"></i> GitHub (Outlawstarz)
                 </a>
                 <span class="hidden sm:inline">|</span>
-                <a href="https://outlawstarz.itch.io/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors duration-300">
+                <a href="https://outlawstarz.itch.io/" target="_blank" rel="noopener noreferrer" class="hover-accent transition-colors duration-300">
                     <i class="fas fa-gamepad mr-1"></i> Itch.io (Outlawstarz)
                 </a>
             </div>
@@ -71,8 +91,8 @@
 
         <main>
 
-            <section id="summary" class="mb-8">
-                <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-2 mb-4">
+            <section id="summary" class="mb-8 section-card p-6">
+                <h2 class="text-2xl font-semibold section-header pb-2 mb-4">
                     <i class="fas fa-user-alt mr-2"></i>Professional Summary
                 </h2>
                 <p class="text-gray-700 leading-relaxed">
@@ -80,8 +100,8 @@
                 </p>
             </section>
 
-            <section id="experience" class="mb-8">
-                <h2 class="text-2xl font-semibold text-blue-700 border-b-2 border-blue-200 pb-2 mb-6">
+            <section id="experience" class="mb-8 section-card p-6">
+                <h2 class="text-2xl font-semibold section-header pb-2 mb-6">
                     <i class="fas fa-briefcase mr-2"></i>Professional Experience
                 </h2>
                 <div class="mb-6 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -98,8 +118,8 @@
                 </div>
             </section>
 
-            <section id="education" class="mb-8">
-                <h2 class="text-2xl font-semibold text-blue-700 border-b-2 border-blue-200 pb-2 mb-6">
+            <section id="education" class="mb-8 section-card p-6">
+                <h2 class="text-2xl font-semibold section-header pb-2 mb-6">
                     <i class="fas fa-graduation-cap mr-2"></i>Education
                 </h2>
                 <div class="mb-6 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -116,8 +136,8 @@
                 </div>
             </section>
 
-            <section id="skills" class="mb-8">
-                <h2 class="text-2xl font-semibold text-indigo-700 border-b-2 border-indigo-200 pb-2 mb-6">
+            <section id="skills" class="mb-8 section-card p-6">
+                <h2 class="text-2xl font-semibold section-header pb-2 mb-6">
                     <i class="fas fa-cogs mr-2"></i>Technical Proficiencies
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -157,8 +177,8 @@
                 </div>
             </section>
 
-            <section id="projects" class="mb-8">
-                <h2 class="text-2xl font-semibold text-blue-700 border-b-2 border-blue-200 pb-2 mb-6">
+            <section id="projects" class="mb-8 section-card p-6">
+                <h2 class="text-2xl font-semibold section-header pb-2 mb-6">
                     <i class="fas fa-project-diagram mr-2"></i>Key Projects
                 </h2>
                 <div class="mb-6 p-4 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -218,8 +238,6 @@
                         <ul class="list-disc list-inside text-gray-700 space-y-1">
                             <li>Designed and maintained a robust home-based server infrastructure supporting multiple game servers</li>
                             <li>Implemented automated backup systems ensuring zero data loss across all game servers</li>
-                            <li>Optimized server performance through custom configuration and resource management</li>
-                            <li>Managed mod pack integration and updates across multiple game platforms</li>
                         </ul>
                     </div>
                     <div class="mt-3">
@@ -227,7 +245,6 @@
                         <ul class="list-disc list-inside text-gray-700 space-y-1">
                             <li>Maintained 99.9% server uptime through proactive monitoring and maintenance</li>
                             <li>Reduced server response time by 40% through optimization of server configurations</li>
-                            <li>Implemented automated deployment pipelines for seamless server updates</li>
                         </ul>
                     </div>
                     <div class="mt-3">
